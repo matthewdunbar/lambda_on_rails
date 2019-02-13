@@ -13,6 +13,7 @@ require "rails/test_unit/reporter"
 Rails::TestUnitReporter.executable = 'bin/test'
 
 require 'minitest/autorun'
+require 'pry'
 
 # Load fixtures from the engine
 if ActiveSupport::TestCase.respond_to?(:fixture_path=)

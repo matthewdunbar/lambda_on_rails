@@ -8,7 +8,7 @@ class LambdaOnRails::JobRunner::Test < ActiveSupport::TestCase
       true,
       [
         {
-          message_body: '{}'
+          message_body: Base64.encode64({}.to_json)
         }
       ]
     )

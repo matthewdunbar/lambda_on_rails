@@ -8,7 +8,7 @@ module LambdaOnRails
 
     def enqueue(job)
       queue = queue_loader.get_queue(job.enqueue_url)
-      queue.send_message(message_body: job.serialize.to_s)
+      queue.send_message(message_body: Base64.encode64(job.serialize.to_json))
     end
   end
 end
